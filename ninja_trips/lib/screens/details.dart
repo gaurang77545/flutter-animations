@@ -21,7 +21,7 @@ class Details extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             ClipRRect(
-              child: Hero(
+              child: Hero(//dsjdjsahd
                 tag: 'location-img-${trip.img}',
                 child: Image.asset(
                   'images/${trip.img}',
