@@ -16,6 +16,7 @@ class _SandboxState extends State<Sandbox> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedContainer(
+        //Animated container allows u to modify pproperties like width and margin.Had u used things like container the change in width would had been abrupt
         duration: Duration(seconds: 1),
         margin: EdgeInsets.all(_margin),
         width: _width,
@@ -23,9 +24,9 @@ class _SandboxState extends State<Sandbox> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(//agja adggjdagd ajdagd adja
+            RaisedButton(
               child: Text('animate margin'),
-              onPressed: () => setState(() => _margin = 50),
+              onPressed: () => setState(() => _margin = 50),//the transition would be smooth
             ),
             RaisedButton(
               child: Text('animate color'),
@@ -39,7 +40,7 @@ class _SandboxState extends State<Sandbox> {
               child: Text('animate opacity'),
               onPressed: () => setState(() => _opacity = 0),
             ),
-            AnimatedOpacity(
+            AnimatedOpacity(//Animated container doesen't allow u to animate opacity so we use this for changing . 
               duration: Duration(seconds: 2),
               opacity: _opacity,
               child: Text(
